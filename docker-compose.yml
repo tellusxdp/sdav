@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  jupyter:
+    build: ./
+    environment:
+      TZ: Asia/Tokyo
+    volumes:
+      - "./notebooks:/home/jovyan"
+    ports:
+      - "8888:8888"
+      - "8889:8889"
+    container_name: tellus-jupyter
+
