@@ -3,7 +3,9 @@ services:
   jupyter:
     build: ./
     environment:
-      TZ: Asia/Tokyo
+      - TZ:Asia/Tokyo
+      - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
+    env_file: .env
     volumes:
       - "./notebooks:/home/jovyan"
     ports:
