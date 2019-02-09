@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   jupyter:
-    build: ./
+    build:
       context: .
       dockerfile: Dockerfile.jupyter
     environment:
@@ -22,3 +22,13 @@ services:
       - "./notebooks/api:/home/jovyan"
     ports:
       - "8889:8889" 
+    container_name: kernel_gateway
+
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - "8890:8890" 
+    depends_on:
+      - kernel_gateway
