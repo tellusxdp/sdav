@@ -29,6 +29,7 @@ services:
       context: .
       dockerfile: Dockerfile.nginx
     ports:
-      - "8890:8890" 
+      - "80:80" 
     depends_on:
       - kernel_gateway
+    container_name: nginx
