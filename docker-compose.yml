@@ -9,7 +9,7 @@ services:
       - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
     env_file: .env
     volumes:
-      - "./notebooks:/home/jovyan"
+      - "./notebooks/api:/home/jovyan"
     ports:
       - "8888:8888"
     container_name: tellus-jupyter
