@@ -2,6 +2,8 @@ version: '3.7'
 services:
   jupyter:
     build: ./
+      context: .
+      dockerfile: Dockerfile.jupyter
     environment:
       - TZ:Asia/Tokyo
       - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
@@ -10,6 +12,13 @@ services:
       - "./notebooks:/home/jovyan"
     ports:
       - "8888:8888"
-      - "8889:8889"
     container_name: tellus-jupyter
 
+  kernel_gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile.kernel_gateway
+    volumes:
+      - "./notebooks/api:/home/jovyan"
+    ports:
+      - "8889:8889" 
