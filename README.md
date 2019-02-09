@@ -13,8 +13,14 @@ docker-compose up -d
 response json
 ```
 docker exec -it kernel_gateway bash
-curl -i http://sdav.app.tellusxdp.com/img/osm/13/7248/3226
-curl -i http://sdav.app.tellusxdp.com/ndsi_img/13/7252/3234
+curl -i http://localhost:8889/img/osm/13/7248/3226
+curl -i http://localhost:8889/ndsi_img/13/7252/3234
+```
+
+#api
+```
+http://sdav.app.tellusxdp.com/img/osm/13/7252/3234
+http://sdav.app.tellusxdp.com/ndsi_img/13/7252/3234
 ```
 
 ## reference
