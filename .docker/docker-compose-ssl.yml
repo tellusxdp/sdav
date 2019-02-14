@@ -7,7 +7,7 @@ services:
     environment:
       - TZ:Asia/Tokyo
       - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
-    env_file: .env
+        #env_file: .env
     volumes:
       - ../notebooks/api:/home/jovyan
     ports:
