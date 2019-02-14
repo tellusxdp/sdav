@@ -12,7 +12,7 @@ services:
       - ../notebooks/api:/home/jovyan
     ports:
       - "8888:8888"
-    container_name: tellus-jupyter
+    container_name: sdav-jupyter
 
   sdav-gateway:
     build:
@@ -22,7 +22,9 @@ services:
       - ../notebooks/api:/home/jovyan
     ports:
       - "8889:8889"
-    container_name: kernel-gateway
+    container_name: sdav-gateway
+    links:
+      - sdav-jupyter
 
   sdav-proxy:
     image: nginx:1.15.8-alpine
