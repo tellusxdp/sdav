@@ -6,7 +6,8 @@
 
 ## create local env
 ```
-docker-compose up -d
+cd .deploy
+sh local.sh
 ```
 
 ## try
@@ -25,4 +26,5 @@ http://sdav.app.tellusxdp.com/ndsi_img/13/7252/3234
 
 ## reference
 - https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md
+
 
