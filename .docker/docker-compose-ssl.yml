@@ -23,8 +23,6 @@ services:
     ports:
       - "8889:8889"
     container_name: sdav-gateway
-    links:
-      - sdav-jupyter
 
   sdav-proxy:
     image: nginx:1.15.8-alpine
