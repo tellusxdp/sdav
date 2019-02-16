@@ -7,11 +7,9 @@ services:
     environment:
       - TZ:Asia/Tokyo
       - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
-      - GRANT_SUDO:"yes"
     env_file: .env
     volumes:
       - ../notebooks:/home/jovyan
-    user: root
     ports:
       - "8888:8888"
     container_name: sdav-jupyter
