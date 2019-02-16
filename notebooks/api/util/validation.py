@@ -2,8 +2,6 @@
 # -*- coding: utf-8 -*-
 
 img_types=["osm",
-           "landsat8",
-           "landsat8-201808",
            "true",
            "natural",
            "av2ori/band1",

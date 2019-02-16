@@ -9,7 +9,7 @@ services:
       - JUPYTER_PASSWORD=${JUPYTER_PASSWORD}
     env_file: .env
     volumes:
-      - ../notebooks/api:/home/jovyan
+      - ../notebooks:/home/jovyan
     ports:
       - "8888:8888"
     container_name: sdav-jupyter

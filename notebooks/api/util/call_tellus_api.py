@@ -6,8 +6,6 @@ from skimage import io
 
 URL_DOMAIN="https://img.opf-dev.jp"
 img_types=["osm",
-           "landsat8",
-           "landsat8-201808",
            "true",
            "natural",
            "av2ori/band1",
