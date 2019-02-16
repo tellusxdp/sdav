@@ -2,14 +2,12 @@
 # -*- coding: utf-8 -*-
 
 img_types=["osm",
-           "landsat8",
-           "landsat8-201808",
            "true",
            "natural",
-           "av2ori/band1",
-           "av2ori/band2",
-           "av2ori/band3",
-           "av2ori/band4"]
+           "band1",
+           "band2",
+           "band3",
+           "band4"]
 
 def input_validation_check(x, y, z, img_type="osm"):
     """バリデーションチェック"""
