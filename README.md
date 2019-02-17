@@ -13,7 +13,7 @@ sh local.sh
 ## try
 response json
 ```
-docker exec -it kernel_gateway bash
+docker exec -it sdav-gateway bash
 curl -i http://localhost:8889/img/osm/13/7248/3226
 curl -i http://localhost:8889/ndsi_img/13/7252/3234
 curl -i http://localhost:8889/sar_analysis_img
