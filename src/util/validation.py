@@ -14,7 +14,7 @@ def input_validation_check(x, y, z, img_type="osm"):
     
     if not img_type or not x or not y or not z:
         print("ERROR: Input format error. please input `/img/[img_type]/[z]/[x]/[y]`")
-        print("ex. http://localhost:8822/img/osm/13/7252/3234")
+        print("ex. http://localhost:8889/img/osm/13/7252/3234")
         return False
     
     elif img_type not in img_types:
