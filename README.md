@@ -20,8 +20,13 @@ curl -i http://localhost:8889/ndsi_img/13/7252/3234
 
 ## api
 ```
-http://sdav.app.tellusxdp.com/img/osm/13/7252/3234
-http://sdav.app.tellusxdp.com/ndsi_img/13/7252/3234
+http://sdav.app.tellusxdp.com/cli/img/osm/13/7252/3234
+http://sdav.app.tellusxdp.com/cli/ndsi_img/13/7252/3234
+```
+
+## jupyter notebook
+```
+http://sdav.app.tellusxdp.com
 ```
 
 ## reference
