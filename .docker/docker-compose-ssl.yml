@@ -21,7 +21,7 @@ services:
       context: ../
       dockerfile: .docker/kernel_gateway.Dockerfile
     volumes:
-      - ../notebooks/api:/home/jovyan
+      - ../notebooks:/home/jovyan
     ports:
       - "8889:8889"
     container_name: sdav-gateway
