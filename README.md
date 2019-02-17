@@ -20,11 +20,19 @@ curl -i http://localhost:8889/sar_analysis_img
 ```
 
 ## api
+
+### use optical image
 ```
-http://sdav.app.tellusxdp.com/cli/img/osm/13/7252/3234
-http://sdav.app.tellusxdp.com/cli/ndsi_img/13/7252/3234
-http://sdav.app.tellusxdp.com/cli/sar_analysis_img
+https://sdav.app.tellusxdp.com/cli/img/osm/13/7252/3234
+https://sdav.app.tellusxdp.com/cli/ndsi_img/13/7252/3234
 ```
+
+### use SAR imgae
+```
+https://sdav.app.tellusxdp.com/cli/img/osm/13/7253/3234
+https://sdav.app.tellusxdp.com/cli/sar_analysis_img
+```
+
 
 ## jupyter notebook
 ```

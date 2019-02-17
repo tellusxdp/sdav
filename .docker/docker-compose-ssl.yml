@@ -10,6 +10,8 @@ services:
     env_file: .env
     volumes:
       - ../notebooks:/home/jovyan
+      - ./wildcard.app.tellusxdp.com.crt:/var/wildcard.app.tellusxdp.com.crt
+      - ./wildcard.app.tellusxdp.com.key:/var/wildcard.app.tellusxdp.com.key
     ports:
       - "8888:8888"
     container_name: sdav-jupyter
