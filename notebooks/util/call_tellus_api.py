@@ -36,12 +36,10 @@ def get_local_sar_image():
 
     else:
         #ない場合はtif形式のSAR画像（1.5GB*2）を読み込み、トリミング
-        print(os.getcwd())        
-        sys.exit(os.listdir())
 
-        # SAR画像（tif形式）の読み込み
-        img_fuji_sep_org = io.imread("data/IMG-HH-ALOS2233612910-180920-UBSR2.1GUD.tif")
-        img_fuji_dec_org = io.imread("adta/IMG-HH-ALOS2246032910-181213-UBSR2.1GUD.tif")
+        # SAR画像（tif形式）の読み込み  #重すぎてエラーになることあり
+        img_fuji_sep_org = io.imread("/tmp/IMG-HH-ALOS2233612910-180920-UBSR2.1GUD.tif")
+        img_fuji_dec_org = io.imread("/tmp/IMG-HH-ALOS2246032910-181213-UBSR2.1GUD.tif")
     
         # 前処理
         # 画像が大きすぎるため、富士山の周辺のみ切り取り
