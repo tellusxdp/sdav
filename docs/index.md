@@ -148,14 +148,16 @@ cd /var/sdav/.deploy && sh production.sh
 ### local
 
 
-``` http://localhost:8889/img/osm/13/7252/3234
+```
+http://localhost:8889/img/osm/13/7252/3234
 http://localhost:8889/ndsi_img/13/7252/3234
 http://localhost:8889/sar_analysis_img 
 ```
 
 ### production
 
-``` https://sdav.app.tellusxdp.com/cli/img/osm/13/7252/3234
+```
+https://sdav.app.tellusxdp.com/cli/img/osm/13/7252/3234
 https://sdav.app.tellusxdp.com/cli/ndsi_img/13/7252/3234
 https://sdav.app.tellusxdp.com/cli/sar_analysis_img 
 ```
