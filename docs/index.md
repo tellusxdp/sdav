@@ -281,8 +281,11 @@ SAR画像をTellusAPIから取得し、データの確認を行う。また、9�
 
 ### 参考文献
 * 開発
-    * [jupyter kernel gateway](https://jupyter-kernel-gateway.readthedocs.io/en/latest/)
-    * [datascience-notebook](https://hub.docker.com/r/jupyter/datascience-notebook/)
+    * [https://docs.docker.com/](https://docs.docker.com/)
+    * [https://hub.docker.com/r/jupyter/datascience-notebook/](https://hub.docker.com/r/jupyter/datascience-notebook/) 
+    * [https://jupyter-kernel-gateway.readthedocs.io/en/latest/](https://jupyter-kernel-gateway.readthedocs.io/en/latest/)
+    * [https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md
+](https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md)
 * 分析
     * [ALOS-2の概要 - 地球観測研究センター](https://www.eorc.jaxa.jp/ALOS-2/about/joverview.htm)
     * [ALOS-2/PALSAR-2 プロダクトフォーマット説明書](https://www.eorc.jaxa.jp/ALOS-2/doc/fdata/PALSAR-2_xx_Format_CEOS_J_r.pdf)
