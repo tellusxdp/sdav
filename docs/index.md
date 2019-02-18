@@ -44,7 +44,68 @@
 
 ## デプロイ方法
 
-[README.md](https://github.com/tellusxdp/sdav) を参照
+>Docker version 18.09  
+>docker-compose version 1.23  
+
+### docker install
+
+まずはdockerをインストール  
+以下のシェルを実行
+
+``` bash
+#!/bin/bash
+sudo apt update
+sudo apt install git
+sudo apt-get install -y \
+        apt-transport-https \
+        ca-certificates \
+        curl \
+        software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+sudo add-apt-repository \
+        "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+        $(lsb_release -cs) \
+        stable"
+sudo apt update
+sudo apt-get install -y docker-ce
+sudo gpasswd -a $(whoami) docker
+sudo chgrp docker /var/run/docker.sock
+sudo service docker restart
+docker info
+
+sudo curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose -v
+```
+
+### local
+
+以下を実行
+
+``` bash
+git clone https://github.com/tellusxdp/sdav.git
+cd satellite-puzzle/.deploy
+sudo sh local.sh
+```
+
+### 本番
+
+wildcard.app.tellusxdp.com.crt, wildcard.app.tellusxdp.com.keyを`/var`配下におく  
+※ wildcard.app.tellusxdp.com.crtは中間証明書と合成しておくこと  
+
+その後$HOME配下に以下のシェルスクリプトを置きsudoで実行する
+
+``` bash
+#!/bin/bash
+if [ -d /var/sdav ] ; then
+        rm -rf /var/sdav
+fi
+cd /var && git clone https://github.com/tellusxdp/sdav.git
+cp wildcard.app.tellusxdp.com.crt sdav/.docker
+cp wildcard.app.tellusxdp.com.key sdav/.docker
+cd /var/sdav/.deploy && sh production.sh
+```
 
 ---
 
