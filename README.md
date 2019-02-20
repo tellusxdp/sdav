@@ -1,4 +1,4 @@
-# SDAV
+# Satellite Data Analysis and Visualization web server (SDAV)
 
 ![mtfuji_ndsi](https://user-images.githubusercontent.com/8220075/52929715-e6aa4c80-3388-11e9-887b-127ba1dca1dd.png)
 
@@ -8,51 +8,49 @@
 
 
 ## 概要
-SDAVはTellusのデータをJupyter Notebookで分析し、それをAPI化するサンプルプロジェクトです。
+SDAVはTellusのデータをJupyter Notebookで分析し、解析結果をAPI化するサンプルプロジェクトです。
 参考実装として雪質の解析とそのAPI化を行っています。
 
-**Tellus Platformでの動作を想定しているため、それ以外の環境ではAPI利用に失敗します**
+**Tellus Platformでの動作を想定しているため、それ以外の環境ではTellusAPIの利用に失敗します**
 
 [開発者向けドキュメントはこちら](https://tellusxdp.github.io/sdav/)
 
 
-## 依存先
+## 依存先 (ホスト)
 - docker
 - docker-compose
 
 
-## 実行方法
-### 起動
+## 起動
 ```
 cd .deploy
 sh local.sh
 ```
 
-初期パスワード: `password`
-
-### アクセス試行
-```
-docker exec -it sdav-gateway bash
-curl -i http://localhost:8080/img/osm/13/7248/3226
-curl -i http://localhost:8080/ndsi_img/13/7252/3234
-curl -i http://localhost:8080/sar_analysis_img
-```
-
 
 ## API例
 ```
+# OpenStreamMapの取得
 http://localhost:8080/img/osm/13/7252/3234
+
+# NDSIの結果の取得
 http://localhost:8080/ndsi_img/13/7252/3234
+
+# SARから得られた結果の取得
 http://localhost:8080/sar_analysis_img
 ```
 
-[詳細はこちら](https://github.com/tellusxdp/sdav/blob/master/notebooks/api/get_image_api.ipynb)
+詳細は各Notebookを参照してください
+* [分析](https://github.com/tellusxdp/sdav/tree/master/notebooks/analysis)
+* [API](https://github.com/tellusxdp/sdav/blob/master/notebooks/api/get_image_api.ipynb)
 
 
-## Jupyter Notebook
+## Jupyter Notebookの利用
 ```
 http://localhost:8888
 ```
+
+(初期パスワード: `password`)
 
 
 ## 参考
