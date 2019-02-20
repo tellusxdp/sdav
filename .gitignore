@@ -1,4 +1,6 @@
 notebooks/*
 !notebooks/*.ipynb
 .bash_history
-
+.docker/*.crt
+.docker/*.key
+.docker/.env
