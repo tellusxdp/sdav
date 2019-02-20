@@ -34,6 +34,7 @@ services:
       - ./wildcard.app.tellusxdp.com.key:/etc/nginx/wildcard.app.tellusxdp.com.key:ro
       - ./fake_htpasswd:/etc/nginx/htpasswd:ro
     ports:
+      - "80:80" # for redirecting
       - "443:443"
     container_name: sdav-proxy
     links:
