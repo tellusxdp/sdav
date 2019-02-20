@@ -59,3 +59,9 @@ http://localhost:8888
 * [https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md
 ](https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md)
 
+
+## Collaborators
+* 株式会社プラハ
+  * [@motionweekender](https://www.instagram.com/motionweekender/)
+  * [@revenue-hack](https://github.com/revenue-hack)
+
