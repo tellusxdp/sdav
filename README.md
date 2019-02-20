@@ -1,8 +1,14 @@
 # Satellite Data Analysis and Visualization web server (SDAV)
 
-![mtfuji_ndsi](https://user-images.githubusercontent.com/8220075/52929715-e6aa4c80-3388-11e9-887b-127ba1dca1dd.png)
+<p align="center">
+  <a href="https://tellusxdp.github.io/sdav">
+    <img src="https://user-images.githubusercontent.com/8220075/52929715-e6aa4c80-3388-11e9-887b-127ba1dca1dd.png">
+  </a>
+</p>
+
 
 想定環境
+
 > OS: Ubuntu 18.04 (ホスト)
 > Python 3.6 (コンテナ内)
 
@@ -64,4 +70,14 @@ http://localhost:8888
 * 株式会社プラハ
   * [@motionweekender](https://www.instagram.com/motionweekender/)
   * [@revenue-hack](https://github.com/revenue-hack)
+
+
+-----
+
+
+<p align="center">
+  <a href="https://www.tellusxdp.com">
+    <img src="https://user-images.githubusercontent.com/3175456/53102763-b53fa580-356f-11e9-94d5-a934d220c6fa.png">
+  </a>
+</p>
 
