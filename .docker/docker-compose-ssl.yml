@@ -12,8 +12,6 @@ services:
       - ../notebooks:/home/jovyan
       - ./wildcard.app.tellusxdp.com.crt:/var/wildcard.app.tellusxdp.com.crt
       - ./wildcard.app.tellusxdp.com.key:/var/wildcard.app.tellusxdp.com.key
-    ports:
-      - "8888:8888"
     container_name: sdav-jupyter
 
   sdav-gateway:
@@ -22,8 +20,6 @@ services:
       dockerfile: .docker/kernel_gateway.Dockerfile
     volumes:
       - ../notebooks:/home/jovyan
-    ports:
-      - "8889:8889"
     container_name: sdav-gateway
 
   sdav-proxy:
@@ -38,7 +34,6 @@ services:
       - ./wildcard.app.tellusxdp.com.key:/etc/nginx/wildcard.app.tellusxdp.com.key
       - ./fake_htpasswd:/etc/nginx/htpasswd
     ports:
-      - "80:80"
       - "443:443"
     container_name: sdav-proxy
     links:
