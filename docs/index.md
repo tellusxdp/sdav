@@ -1,7 +1,7 @@
-# 雪質解析API
+# 衛星データ分析可視化サーバ（参考実装: 雪質解析）
 
->OS: Ubuntu 18.04  
->python: 3.6  
+想定環境
+> ホストOS: Ubuntu 18.04
 
 
 ## 目次
@@ -18,9 +18,9 @@
     * 光学画像を用いたNDSI分析
     * SAR画像の基礎分析
 * サービスへのリンク
-    
-## 概要
 
+
+## 概要
 衛星画像を利用することで、スキー場の雪質を解析・監視するためのAPIを作成
 
 ### 背景
@@ -31,8 +31,8 @@
 
 * TellusがAPIで提供する衛星データを利用することで以下を検証
     * 雪が積もっているかどうかの判定
-    * 雪質を色で可視化
-* 解析結果をもとに雪質判定APIを作成
+    * 雪質を色のグラデーションで可視化
+* 解析結果をもとに雪質判定をAPI化
 
 ---
 ## アプリ構成
@@ -46,7 +46,7 @@
 
 ### 依存ライブラリ
 
-* Docker 
+* Docker
     * jupyter/datascience-notebook
     * jupyter kernel gateway
     * nginx
@@ -57,12 +57,12 @@
 
 ## デプロイ方法
 
->Docker version 18.09  
->docker-compose version 1.23  
+>Docker version 18.09
+>docker-compose version 1.23
 
 ### docker install
 
-まずはdockerをインストール  
+まずはdockerをインストール
 以下のシェルを実行
 
 ``` bash
@@ -104,8 +104,8 @@ sudo sh local.sh
 
 ### production
 
-wildcard.app.tellusxdp.com.crt, wildcard.app.tellusxdp.com.keyを`/var`配下におく  
-※ wildcard.app.tellusxdp.com.crtは中間証明書と合成しておくこと  
+wildcard.app.tellusxdp.com.crt, wildcard.app.tellusxdp.com.keyを`/var`配下におく
+※ wildcard.app.tellusxdp.com.crtは中間証明書と合成しておくこと
 
 その後$HOME配下に以下のシェルスクリプトを置きsudoで実行する
 
@@ -125,7 +125,7 @@ cd /var/sdav/.deploy && sh production.sh
 # API情報
 
 ## URI
- 
+
 | name | description | URI |output format|
 |:--|:--|:--|:--|
 | original image| tellus APIの画像をそのまま出力 | production:<br> https://0.0.0.0/cli/img/{kind}/{z}/{x}/{y} <br>local:<br> http://localhost:8889/img/{kind}/{z}/{x}/{y}  | html |
@@ -278,8 +278,8 @@ SAR(Synthetic Aperture Radar; 合成開口レーダー)はマイクロ波を地�
 	* band1（青）
 	* band2（緑）
 	* band3（赤）
-	* band4（近赤外線） 
-	
+	* band4（近赤外線）
+
 ### 利用技術
 * NDSI変換
 * フィルタリング（閾値設定）
@@ -361,7 +361,7 @@ SAR画像をTellusAPIから取得し、データの確認を行う。また、9�
 
 また画像サイズとして、現状の光学画像では分解能10mのため富士山をまるっと覆えてしまうほど引いて取得した画像だが、SAR画像は最大で分解能3mまでズーム可能で、より細かい粒度で雪の判定が可能となる（今回は出力時に256*256に圧縮している）。
 
-### Feature Work
+### Future Work
 
 光学画像においても複数日時のデータを入手できれば、分析の幅は広がる。入手できた場合、それらを用いて雪が降った前後の光学画像を比較した分析、雲がある時/ない時の判定を行いたい。
 
@@ -377,7 +377,7 @@ SAR画像をTellusAPIから取得し、データの確認を行う。また、9�
 ### 参考文献
 * 開発
     * [https://docs.docker.com/](https://docs.docker.com/)
-    * [https://hub.docker.com/r/jupyter/datascience-notebook/](https://hub.docker.com/r/jupyter/datascience-notebook/) 
+    * [https://hub.docker.com/r/jupyter/datascience-notebook/](https://hub.docker.com/r/jupyter/datascience-notebook/)
     * [https://jupyter-kernel-gateway.readthedocs.io/en/latest/](https://jupyter-kernel-gateway.readthedocs.io/en/latest/)
     * [https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md
 ](https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md)
