@@ -9,15 +9,18 @@
 
 想定環境
 
-> OS: Ubuntu 18.04 (ホスト)
+> ホストにDocker/DockerComposeが導入されていること
 > Python 3.6 (コンテナ内)
 
 
 ## 概要
-SDAVはTellusのデータをJupyter Notebookで分析し、解析結果をAPI化するサンプルプロジェクトです。
-参考実装として雪質の解析とそのAPI化を行っています。
+[Tellus](https://www.tellusxdp.com) を利用したサンプルプロジェクトです。
 
-**Tellus Platformでの動作を想定しているため、それ以外の環境ではTellusAPIの利用に失敗します**
+Jupyter Notebookをベースに、Tellusから取得できる衛星画像を利用した様々な分析・可視化をし、結果をAPIするWebサーバです。
+
+参考実装として、雪質の分析・可視化を行うAPIが実装されています。
+
+**Tellus Platformでの動作を想定しているため、それ以外の環境ではTellusAPIの利用に失敗する場合があります**
 
 [開発者向けドキュメントはこちら](https://tellusxdp.github.io/sdav/)
 
@@ -27,7 +30,7 @@ SDAVはTellusのデータをJupyter Notebookで分析し、解析結果をAPI化
 - docker-compose
 
 
-## 起動
+## 実行
 ```
 cd .deploy
 sh local.sh
@@ -46,9 +49,10 @@ http://localhost:8080/ndsi_img/13/7252/3234
 http://localhost:8080/sar_analysis_img
 ```
 
-詳細は各Notebookを参照してください
-* [分析](https://github.com/tellusxdp/sdav/tree/master/notebooks/analysis)
-* [API](https://github.com/tellusxdp/sdav/blob/master/notebooks/api/get_image_api.ipynb)
+詳細は開発者ドキュメントや各Notebookを参照してください
+* [開発者向けドキュメント](https://tellusxdp.github.io/sdav)
+* [分析Notebook](https://github.com/tellusxdp/sdav/tree/master/notebooks/analysis)
+* [API Notebook](https://github.com/tellusxdp/sdav/blob/master/notebooks/api/get_image_api.ipynb)
 
 
 ## Jupyter Notebookの利用
@@ -61,7 +65,7 @@ http://localhost:8888
 
 ## 参考
 * [https://docs.docker.com/](https://docs.docker.com/)
-* [https://hub.docker.com/r/jupyter/datascience-notebook/](https://hub.docker.com/r/jupyter/datascience-notebook/) 
+* [https://hub.docker.com/r/jupyter/datascience-notebook/](https://hub.docker.com/r/jupyter/datascience-notebook/)
 * [https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md
 ](https://github.com/jupyter/kernel_gateway/blob/master/docs/source/config-options.md)
 
