@@ -38,6 +38,7 @@ Jupyter Notebookをベースに、Tellusから取得できる衛星画像を利�
 
 
 ## アプリ構成
+
 | NAME | 役割 | 技術要素など |
 |:--|:--|:--|
 | sdav-proxy | プロキシサーバー | nginx |
@@ -98,11 +99,13 @@ sudo sh local.sh
 
 #### API
 ##### URI
+
 | name | description | URI |output format|
 |:--|:--|:--|:--|
 | original image| Tellus APIの画像をそのまま出力 | local:<br> http://localhost:8889/img/{kind}/{z}/{x}/{y} <br>production:<br> https://0.0.0.0/api/img/{kind}/{z}/{x}/{y} | html |
 
 ##### Parameter
+
 |params|description|sample|
 |:--|:--|:--|
 |kind|画像の種類|osm, band1, band2, band3, band4|
@@ -128,12 +131,14 @@ sudo sh local.sh
 
 #### API
 ##### URI
+
 | name | description | URI |output format|
 |:--|:--|:--|:--|
 | NDSI image| NDSIを計算した結果を出力 | local: <br> http://localhost:8889/ndsi_img/{z}/{x}/{y} <br>production:<br> https://0.0.0.0/api/ndsi_img/{z}/{x}/{y} | html |
 | SAR analysis image| 2枚のSAR画像を比較して解析した結果を出力 | local:<br> http://localhost:8889/sar_analysis_img <br>production:<br> https://0.0.0.0/api/sar_analysis_img | html |
 
 ##### Parameter
+
 |params|description|sample|
 |:--|:--|:--|
 |kind|画像の種類|osm, band1, band2, band3, band4|
