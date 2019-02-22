@@ -102,7 +102,7 @@ sudo sh local.sh
 
 | name | description | URI |output format|
 |:--|:--|:--|:--|
-| original image| Tellus APIの画像をそのまま出力 | local:<br> http://localhost:8889/img/{kind}/{z}/{x}/{y} <br>production:<br> https://0.0.0.0/api/img/{kind}/{z}/{x}/{y} | html |
+| original image| Tellus APIの画像をそのまま出力 | local:<br> http://localhost:8080/img/{kind}/{z}/{x}/{y} <br>production:<br> https://0.0.0.0/api/img/{kind}/{z}/{x}/{y} | html |
 
 ##### Parameter
 
@@ -114,7 +114,7 @@ sudo sh local.sh
 |y|地図のy軸の値|3234|
 
 #### API利用例
-`http://localhost:8889/img/osm/13/7252/3234`
+`http://localhost:8080/img/osm/13/7252/3234`
 ![default](https://user-images.githubusercontent.com/8220075/52954330-3ca0e380-33cd-11e9-955b-b5ac4ab25f85.png)
 
 
@@ -134,8 +134,8 @@ sudo sh local.sh
 
 | name | description | URI |output format|
 |:--|:--|:--|:--|
-| NDSI image| NDSIを計算した結果を出力 | local: <br> http://localhost:8889/ndsi_img/{z}/{x}/{y} <br>production:<br> https://0.0.0.0/api/ndsi_img/{z}/{x}/{y} | html |
-| SAR analysis image| 2枚のSAR画像を比較して解析した結果を出力 | local:<br> http://localhost:8889/sar_analysis_img <br>production:<br> https://0.0.0.0/api/sar_analysis_img | html |
+| NDSI image| NDSIを計算した結果を出力 | local: <br> http://localhost:8080/ndsi_img/{z}/{x}/{y} <br>production:<br> https://0.0.0.0/api/ndsi_img/{z}/{x}/{y} | html |
+| SAR analysis image| 2枚のSAR画像を比較して解析した結果を出力 | local:<br> http://localhost:8080/sar_analysis_img <br>production:<br> https://0.0.0.0/api/sar_analysis_img | html |
 
 ##### Parameter
 
@@ -148,10 +148,10 @@ sudo sh local.sh
 
 
 #### API利用例
-`http://localhost:8889/ndsi_img/13/7252/3234`
+`http://localhost:8080/ndsi_img/13/7252/3234`
 ![default](https://user-images.githubusercontent.com/8220075/52929715-e6aa4c80-3388-11e9-887b-127ba1dca1dd.png)
 
-`http://localhost:8889/sar_analysis_img`
+`http://localhost:8080/sar_analysis_img`
 ![default](https://user-images.githubusercontent.com/8220075/52954420-825dac00-33cd-11e9-83c7-a90f105f809c.png)
 
 
