@@ -9,8 +9,7 @@
 
 想定環境
 
-> ホストにDocker/DockerComposeが導入されていること  
-> Python 3.6 (コンテナ内)
+> ホストにDocker/DockerComposeが導入されていること
 
 
 ## 概要
@@ -29,6 +28,9 @@ Jupyter Notebookをベースに、Tellusから取得できる衛星画像を利�
 - Docker
 - DockerCompose
 
+
+## 依存先（コンテナ内）
+- Python 3.6+
 
 ## 実行
 ```
