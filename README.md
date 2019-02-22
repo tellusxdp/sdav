@@ -26,8 +26,8 @@ Jupyter Notebookをベースに、Tellusから取得できる衛星画像を利�
 
 
 ## 依存先 (ホスト)
-- docker
-- docker-compose
+- Docker
+- DockerCompose
 
 
 ## 実行
