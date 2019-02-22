@@ -190,6 +190,7 @@ SAR (Synthetic Aperture Radar; 合成開口レーダー) はマイクロ波を�
 |L band | 1.2GHz帯（波長 23cm） |
 
 ### 光学画像とSAR画像の比較
+
 ||光学画像(AVNIR-2)|SAR画像(PALSAR-2)|備考|
 |:--|:--|:--|:--|
 |分解能|10m|3~100m|SARの高分解能モードでは3mまで分解可能|
