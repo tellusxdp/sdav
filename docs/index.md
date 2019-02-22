@@ -9,7 +9,8 @@
 ## 目次
 * [概要](#概要)
 * [アプリ構成](#アプリ構成)
-* [デプロイ方法](#デプロイ方法)
+* [デプロイ準備例 (Ubntu 18.04)](#デプロイ準備例ubuntu1804)
+* [実行](#実行)
 * [API情報](#API情報)
   * [サンプルAPI](#サンプルapi)
   * [雪質解析API](#雪質解析api)
@@ -51,10 +52,9 @@ Jupyter Notebookをベースに、Tellusから取得できる衛星画像を利�
 
 
 ## デプロイ準備例 (Ubuntu 18.04)
-DockerとDockerComposeをインストール
+DockerとDockerComposeをインストールします。
 
-``` bash
-#!/bin/bash
+```bash
 sudo apt update
 sudo apt install git
 sudo apt-get install -y \
@@ -82,7 +82,7 @@ docker-compose -v
 
 
 ## 実行
-``` bash
+```bash
 git clone https://github.com/tellusxdp/sdav.git
 cd satellite-puzzle/.deploy
 sudo sh local.sh
@@ -157,7 +157,7 @@ sudo sh local.sh
 * [Jupyter NotebookでTellusを使ってみた〜雪質解析してみた〜](https://sorabatake.jp/3531/)
 
 
----
+-----
 
 
 ## 雪質解析詳細
