@@ -74,7 +74,7 @@ http://localhost:8888
 
 ## Collaborators
 * 株式会社プラハ
-  * [@motionweekender](https://www.instagram.com/motionweekender/)
+  * [@shin-kanouchi](https://github.com/shin-kanouchi)
   * [@revenue-hack](https://github.com/revenue-hack)
 
 
