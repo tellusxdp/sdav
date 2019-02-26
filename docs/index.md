@@ -85,7 +85,7 @@ docker-compose -v
 ```bash
 git clone https://github.com/tellusxdp/sdav.git
 cd satellite-puzzle/.deploy
-sudo sh local.sh
+sudo ./local-up.sh
 ```
 
 

@@ -35,7 +35,7 @@ Jupyter Notebookをベースに、Tellusから取得できる衛星画像を利�
 ## 実行
 ```
 cd .deploy
-sh local.sh
+./local-up.sh
 ```
 
 
